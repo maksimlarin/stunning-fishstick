@@ -1,0 +1,10 @@
+class AdvancedCombineDataService {
+    
+    @Published var basicPublisher: String = "first"
+    let currentValuePublisher = CurrentValueSubject<String, Never>("first")
+    let passThroughPublisher = PassthroughSubject<String, Never>()
+
+struct AlignmentGuideView: View {
+    
+    var body: some View {
+        VStack(alignment: .leading) {
